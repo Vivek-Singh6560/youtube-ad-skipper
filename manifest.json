@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Ad Skipper",
+  "version": "1.0",
+  "description": "YouTube Ad Skipper is a lightweight, privacy-friendly extension that automatically skips, mutes, or fast-forwards ads so you can enjoy videos without interruption — no subscriptions, no fuss.",
+  "permissions": ["scripting", "activeTab"],
+  "host_permissions": ["*://www.youtube.com/*"],
+  "content_scripts": [
+    {
+      "matches": ["*://www.youtube.com/*"],
+      "js": ["ad-skipper.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "icons": {
+    "128": "icons/icon128.png"
+  }
+}
